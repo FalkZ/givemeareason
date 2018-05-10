@@ -1,0 +1,12 @@
+{
+	"news": "# News",
+	"events": [
+		{
+			" date": "30.1.1998",
+			"event": { "name": "test", "url": "" },
+			"location": { "name": "bla", "url": "" }
+		}
+	],
+	"about": "# about us",
+	"contact": "[test]()"
+}
