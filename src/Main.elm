@@ -174,7 +174,7 @@ concerts events =
                         past =
                             List.map row (Tuple.second sortedEvents)
                       in
-                        tbody [] (List.concat [ [ rowH2 "upcoming" ], upcoming, [ rowH2 "past" ], past ])
+                        tbody [] (List.concat [ [ rowH2 "upcoming", text "2018" ], upcoming, [ rowH2 "past" ], past ])
                     ]
                 ]
 
