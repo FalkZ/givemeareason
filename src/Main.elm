@@ -12,6 +12,8 @@ import Markdown
 import Array
 import ImageSlider
 import Types exposing (..)
+import U exposing (u)
+import Icons
 
 
 --import Date exposing (now)
@@ -36,6 +38,7 @@ initContent =
     , events = Maybe.Nothing
     , about = ""
     , contact = ""
+    , logo = ""
     }
 
 
@@ -92,10 +95,10 @@ subscriptions model =
     content NewContent
 
 
-maybeLink { name, url } =
+maybeLink { name, url } icon =
     case url of
         Just link ->
-            a [ href link ] [ text name ]
+            a [ href link ] (List.concat [ [ text name ], icon ])
 
         Nothing ->
             text name
@@ -134,8 +137,8 @@ row a =
     in
         tr []
             [ td [] [ text ((toString <| Time.Date.day dat) ++ ". " ++ (monthName <| Time.Date.month dat)) ]
-            , td [] [ maybeLink a.event ]
-            , td [] [ maybeLink a.location ]
+            , td [] [ maybeLink a.event [ Icons.arrowUpRight ] ]
+            , td [] [ maybeLink a.location [ Icons.mapPin ] ]
             ]
 
 
@@ -167,8 +170,11 @@ concerts events =
 
                         upcoming =
                             List.map row (Tuple.first sortedEvents)
+
+                        past =
+                            List.map row (Tuple.second sortedEvents)
                       in
-                        tbody [] (List.concat [ [ rowH2 "upcoming" ], upcoming ])
+                        tbody [] (List.concat [ [ rowH2 "upcoming" ], upcoming, [ rowH2 "past" ], past ])
                     ]
                 ]
 
@@ -179,11 +185,23 @@ concerts events =
                 ]
 
 
+socialMedia : Html Msg
+socialMedia =
+    blockquote [ class "socialMedia" ]
+        [ a [ href "https://www.facebook.com/GiveMeAReasonOfficial" ] [ Icons.facebook ]
+        , a [ href "https://www.youtube.com/channel/UCCMwf_diPCwrFHMdAhFVBWg" ] [ Icons.youtube ]
+        , a [ href "https://www.instagram.com/givemeareason_official/" ] [ Icons.instagram ]
+        ]
+
+
 view : Model -> Html Msg
 view model =
     span []
         [ header []
-            [ a [ href "#top" ] [ h1 [] [ text "GIVE ME A REASON" ] ]
+            [ a [ href "#top" ]
+                [ h1 [] [ text "GIVE ME A REASON" ]
+                , img [ class <| U.u { filter = "invert", height = "1", align = "inline" }, src model.content.logo ] []
+                ]
             , nav []
                 [ a [ href "#concerts" ] [ text "concerts" ]
                 , a [ href "#about" ] [ text "about" ]
@@ -192,6 +210,7 @@ view model =
             ]
         , main_ [ id "top" ]
             [ Markdown.toHtml [] model.content.news
+            , socialMedia
             , concerts model.content.events
             , toMarkdown model.content.about
             , Markdown.toHtml [] model.content.contact

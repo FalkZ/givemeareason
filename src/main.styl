@@ -2,12 +2,13 @@
 
 body
   margin 0
-  background linear-gradient(35deg,#081433,#000) no-repeat
+  background linear-gradient(35deg, #081433, #000) no-repeat
 
 main
-  max-width 800px
-  padding 20px
+  overflow-x hidden
   margin 80px auto
+  padding 20px
+  max-width 800px
 
 *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6)
   color white
@@ -16,32 +17,54 @@ main
   font-family Oswald, sans-serif
 
   p, a, td
-    line-height 1.6em
     margin 0
+    margin bottom .6em
     margin-top 1em
-    margin bottom 0.6em
-    letter-spacing 0.03em
+    letter-spacing .03em
+    line-height 1.6em
+
+a
+  transition all .1s ease-out
+
+  &:hover:not(:active)
+    &, *
+      color #71789c // !important
+
+    h1, img
+      color white
+      opacity .5
+      transition all .1s ease-out
 
 h1, h2, h3, h4, h5, h6
-  font-family Anton, sans-serif
   font-weight 400
+  font-family Anton, sans-serif
+
+blockquote
+  display table
+  margin 0 auto
 
 table
   margin 0 -16px
   margin-top 10px
-  border-collapse collapse
   width calc(100% + 32px)
+  border-collapse collapse
+
   p, a
-    padding 0
     margin 0
+    padding 0
 
   td
     padding 6px 16px
+
     &:not(.colspan3):last-child
       text-align right
 
   tr:not(.colspan3):nth-child(odd)
-    background  black
+    background black
+
+.socialMedia svg
+  margin 20px
+  transform scale(2)
 
 .title-picture
   width 100%

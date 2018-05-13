@@ -1,5 +1,5 @@
 ---
-news: "## Melodic Punk Rock"
+news: " > ## Melodic Punk Rock"
 events:
 - date: "1993-02-28"
   event:
@@ -14,14 +14,14 @@ events:
     url: ''
   location:
     name: bla
-    url: null
+    url: new
 - date: "2000-02-28"
   event:
     name: test
     url: ''
   location:
     name: bla
-    url: null
+    url: new
 about: > 
   # about
 

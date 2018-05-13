@@ -31,6 +31,7 @@ type alias Content =
     , events : Maybe (List Event)
     , about : String
     , contact : String
+    , logo : String
     }
 
 

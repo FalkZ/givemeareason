@@ -1,26 +1,59 @@
-header 
+header
   position fixed
   top 0
   left 0
+  z-index 1
+  overflow hidden
+  max-width 100vw !important
   width 100%
   height auto
   background darken(#13134c, 50%)
+  box-shadow 0 10px 23px -7px rgba(0, 0, 0, 1)
 
   &>*, h1
-    display inline-table
+    display inline-block
     height 80px
+    white-space nowrap
     line-height 80px
 
   a
     margin 0 !important
 
     h1
+      margin 0 .15em
       font-size 60px
-      margin 0 15px 
-      
-  
+
   nav
     float right
+    overflow-x auto
+    overflow-y hidden
     margin 0 15px
+    max-width 100vw !important
+
     a
       padding 10px
+
+  &>*
+    @media (max-width: 1000px)
+      margin 0 !important
+      width 100%
+      text-align center
+
+  &>a
+    @media (max-width: 550px)
+      *
+        height 15vw !important
+        font-size 10vw !important
+
+.filterU
+  &invert
+    filter invert(1)
+
+.heightU
+  &1
+    height 100%
+
+.alignU
+  &inline
+    display inline-block
+    margin -15px -5px
