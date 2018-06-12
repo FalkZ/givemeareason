@@ -208,6 +208,7 @@ view model =
                 , a [ href "#contact-booking" ] [ text "contact / booking" ]
                 ]
             ]
+        , img [ id "background", src model.content.logo ] []
         , main_ [ id "top" ]
             [ Markdown.toHtml [] model.content.news
             , socialMedia

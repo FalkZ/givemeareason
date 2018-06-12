@@ -23,7 +23,7 @@ svgFeatherIcon className =
         , stroke "currentColor"
         , strokeLinecap "round"
         , strokeLinejoin "round"
-        , strokeWidth "2"
+        , strokeWidth "1.5"
         , viewBox "0 0 24 24"
         , width "24"
         ]

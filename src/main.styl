@@ -4,11 +4,24 @@ body
   margin 0
   background linear-gradient(35deg, #081433, #000) no-repeat
 
+#background
+  position fixed
+  z-index -1
+  max-width 70vw
+  max-height 100vh
+  filter blur(2px)
+  opacity .8
+  transform rotate(-20deg)
+
 main
   overflow-x hidden
-  margin 80px auto
+  margin 0 auto
+  margin-bottom calc(100vh - 300px)
   padding 20px
   max-width 800px
+
+  &>div
+    margin-top 120px
 
 *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6)
   color white
@@ -30,9 +43,9 @@ a
     &, *
       color #71789c // !important
 
-    h1, img
+    img
+      filter invert(1) sepia(1.4) hue-rotate(170deg) !important
       color white
-      opacity .5
       transition all .1s ease-out
 
 h1, h2, h3, h4, h5, h6
