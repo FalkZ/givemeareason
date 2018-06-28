@@ -12,31 +12,47 @@ images:
 eventsAltText: 'Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.'
 events:
   - date: 2017-05-13T00:00:00.000Z
+    eventUrl: ''   
+    locationUrl: '' 
     eventName: Lauter Festival
     locationName: Stall 6
   - date: 2017-05-26T00:00:00.000Z
+    eventUrl: ''   
+    locationUrl: '' 
     eventName: Vorstadt Sounds Festival
     locationName: Zürich
   - date: 2017-09-09T00:00:00.000Z
+    eventUrl: ''   
+    locationUrl: '' 
     eventName: Skatepark Opening
     locationName: Münchenstein
   - date: 2018-01-12T00:00:00.000Z
+    eventUrl: ''   
+    locationUrl: '' 
     eventName: Unplugged
     locationName: GZ Leimbach
   - date: 2018-04-17T00:00:00.000Z
+    eventUrl: ''   
+    locationUrl: '' 
     eventName: Unplugged
     locationName: La Bohème Bar
   - date: 2018-05-29T00:00:00.000Z
+    eventUrl: ''   
+    locationUrl: '' 
     eventName: Summerbar by VSETH
     locationName: Polyterasse ETH
-  - date: 2018-06-23T00:00:00.000Z
+  - date: 2018-06-23T00:00:00.000Z  
+    locationUrl: '' 
     eventName: Band-it
-    eventUrl: >-
-      https://www.band-it.ch/bands-on-stage/bandportraits/bandportrait/?user_bandit_pi2%5BshowUid%5D=1481&cHash=f2ba297933339ae47876ef5c6b7caa0e
+    eventUrl: https://www.band-it.ch/bands-on-stage/bandportraits/bandportrait/?user_bandit_pi2%5BshowUid%5D=1481&cHash=f2ba297933339ae47876ef5c6b7caa0e
     locationName: Moods Zürich
   - date: 2018-09-08T00:00:00.000Z
+    eventUrl: ''   
+    locationUrl: '' 
     eventName: Töss Rockt 9
     locationName: Güterschuppen Töss
+
+
 about: >
   # about
 
