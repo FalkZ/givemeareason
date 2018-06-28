@@ -21,6 +21,7 @@ main
 
   h1, .image-gallery
     margin-top 120px
+    margin-bottom 0.3em
 
   *
     outline none
@@ -86,10 +87,16 @@ table
     padding 0 !important
 
   td
-    padding 6px 16px
+    padding 10px 16px
 
     &:not(.colspan3):last-child
       text-align right
+    
+    svg 
+      margin-left: 10px
+      height: 1em
+      position relative
+      top 0.1em
 
   tr:nth-child(odd)>td:not(.colspan3)
     background black
