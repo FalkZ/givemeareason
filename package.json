@@ -13,7 +13,7 @@
 		"stylus": "^0.54.5"
 	},
 	"scripts": {
-		"start": "parcel src/index.html",
-		"build": "echo 'no build required'"
+		"start": "elm-make src/Main.elm --output=src/Main.js && parcel src",
+		"build": "elm-make src/Main.elm --output=src/Main.js && parcel build src/index.html --public-url ."
 	}
 }

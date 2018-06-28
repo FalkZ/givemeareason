@@ -7,21 +7,14 @@ port module Main exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
-import Http
 import Markdown
 import Array
 import ImageSlider
 import Json.Decode as Json
-
 import Types exposing (..)
 import U exposing (u)
 import Icons
-import Calendar exposing(calendar, Events)
-
-
---import Date exposing (now)
-
-import Time.Date exposing (Date, date)
+import Calendar exposing (calendar, Events)
 
 
 -- import Json.Decode as Decode
@@ -47,12 +40,10 @@ initContent =
     }
 
 
-
 initModel =
     { content = initContent
     , language = "de"
     , slider = Maybe.Nothing
-   
     }
 
 
@@ -119,7 +110,7 @@ port content : (Content -> msg) -> Sub msg
 subscriptions : Model -> Sub Msg
 subscriptions model =
     content NewContent
-    
+
 
 gallery model =
     let
@@ -182,15 +173,13 @@ exampleImages =
     ]
 
 
-
-
-concerts : String -> Maybe (Events) -> Html Msg
+concerts : String -> Maybe Events -> Html Msg
 concerts now events =
     case events of
         Just ev ->
             div []
                 [ h1 [ id "concerts" ] [ text "concerts" ]
-                ,calendar now "" ev
+                , calendar now "" ev
                 ]
 
         Nothing ->
@@ -226,9 +215,9 @@ view model =
         , img [ id "background", src model.content.logo ] []
         , main_ [ id "top" ]
             [ gallery model
-            , blockquote [] [ h2[][ text "Melodic Punk Rock"]]
+            , blockquote [] [ h2 [] [ text "Melodic Punk Rock" ] ]
             , socialMedia
-            , Markdown.toHtml [] model.content.news          
+            , Markdown.toHtml [] model.content.news
             , concerts model.content.now model.content.events
             , toMarkdown model.content.about
             , Markdown.toHtml [] model.content.contact

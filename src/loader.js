@@ -1,4 +1,4 @@
-import { Main } from './main.js'
+import { Main } from './Main.js'
 //import { Gallery } from './Gallery.elm'
 import registerServiceWorker from './registerServiceWorker'
 //import imports from '../imports'
