@@ -4,6 +4,7 @@
 
 module Types exposing (..)
 
+import Calendar exposing(Events)
 import Http
 
 
@@ -28,7 +29,7 @@ type alias Event =
 
 type alias Content =
     { news : String
-    , events : Maybe (List Event)
+    , events : Maybe (Events)
     , about : String
     , contact : String
     , logo : String

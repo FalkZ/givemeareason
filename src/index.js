@@ -6,6 +6,8 @@ import imports from '../imports'
 import content from './test.yaml'
 import joker from './joker.svg'
 
+console.log(content)
+
 content.logo = joker
 
 import './main.styl'

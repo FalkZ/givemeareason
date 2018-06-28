@@ -122,7 +122,7 @@ firstImage images =
 exampleImages : List Image
 exampleImages =
     [ { alt = "Alternativ Text"
-      , src = "http://givemeareason-official.netlify.com/static/18672986_302050763573256_2992321066351487101_o-91e86ce4f17390cee9ae9f551174d6f0-d14e0.jpg"
+      , src = "http://givemeareason-official.com/static/media/title.850341b1.jpg"
       }
     , { alt = "alt 2"
       , src = "http://givemeareason-official.netlify.com/static/28378028_416887728756225_3617264513967785531_n-6cce4676f6bb54a95e5bb4c1723ddace-02605.jpg"

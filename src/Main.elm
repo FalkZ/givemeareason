@@ -14,6 +14,7 @@ import ImageSlider
 import Types exposing (..)
 import U exposing (u)
 import Icons
+import Calendar exposing(calendar, Events)
 
 
 --import Date exposing (now)
@@ -154,29 +155,11 @@ compareDate d =
             True
 
 
-concerts : Maybe (List Event) -> Html Msg
+concerts : Maybe (Events) -> Html Msg
 concerts events =
     case events of
         Just ev ->
-            div []
-                [ h1 [ id "concerts" ] [ text "concerts" ]
-                , table []
-                    [ let
-                        sortedEvents =
-                            ev
-                                |> List.sortBy .date
-                                |> List.reverse
-                                |> List.partition compareDate
-
-                        upcoming =
-                            List.map row (Tuple.first sortedEvents)
-
-                        past =
-                            List.map row (Tuple.second sortedEvents)
-                      in
-                        tbody [] (List.concat [ [ rowH2 "upcoming", text "2018" ], upcoming, [ rowH2 "past" ], past ])
-                    ]
-                ]
+            calendar "2028-05-15" "" ev
 
         Nothing ->
             div []
