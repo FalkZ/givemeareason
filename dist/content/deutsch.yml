@@ -1,15 +1,16 @@
+---
 news: >-
   > new single out now!
 
   >
 
-  > <iframe width="560" height="315"
-  src="https://www.youtube.com/embed/PykG58v_KIk" frameborder="0"
-  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  > <iframe width="560" height="315" src="https://www.youtube.com/embed/PykG58v_KIk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 images:
   - alt: ''
     src: 'http://givemeareason-official.com/static/media/title.850341b1.jpg'
-eventsAltText: 'Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.'
+
+eventsAltText: Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.
+
 events:
   - date: 2017-05-13T00:00:00.000Z
     eventUrl: ''   

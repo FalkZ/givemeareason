@@ -33,8 +33,7 @@ const app = Main.fullscreen()
 
 //const { general, de, en } = imports.content
 
-const getNow = () => {
-	const d = new Date(Date.now())
+const formatDate = (d) => {
 	let month = '' + (d.getMonth() + 1)
 	let day = '' + d.getDate()
 	let year = d.getFullYear()
@@ -45,6 +44,8 @@ const getNow = () => {
 	return [year, month, day].join('-')
 }
 
+const getNow = () => formatDate(new Date(Date.now()))
+
 fetch('content/deutsch.yml')
 	.then((response) => {
 		console.log(response)
@@ -52,7 +53,19 @@ fetch('content/deutsch.yml')
 	})
 	.then((response) => response.text())
 	.then((text) => yaml.safeLoad(text) || {})
-	.then((content) => Object.assign(content, { now: getNow(), logo: joker }))
+	.then((content) =>
+		Object.assign(content, {
+			now: getNow(),
+			logo: joker,
+			events: content.events.map((event) =>
+				Object.assign(event, { date: formatDate(event.date) })
+			)
+		})
+	)
+	.then((content) => {
+		console.log(content)
+		return content
+	})
 	.then((content) => app.ports.content.send(content))
 	.catch(console.error)
 
