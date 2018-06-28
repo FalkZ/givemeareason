@@ -69,8 +69,8 @@ table
   border-collapse collapse
 
   p, a
-    margin 0
-    padding 0
+    margin 0 !important
+    padding 0 !important
 
   td
     padding 6px 16px
@@ -78,7 +78,7 @@ table
     &:not(.colspan3):last-child
       text-align right
 
-  tr:not(.colspan3):nth-child(odd)
+  tr:nth-child(odd)>td:not(.colspan3)
     background black
 
 .socialMedia svg

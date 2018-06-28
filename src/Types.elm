@@ -33,6 +33,7 @@ type alias Content =
     , about : String
     , contact : String
     , logo : String
+    , now : String
     }
 
 

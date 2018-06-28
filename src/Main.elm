@@ -40,6 +40,7 @@ initContent =
     , about = ""
     , contact = ""
     , logo = ""
+    , now = ""
     }
 
 
@@ -96,70 +97,13 @@ subscriptions model =
     content NewContent
 
 
-maybeLink { name, url } icon =
-    case url of
-        Just link ->
-            a [ href link ] (List.concat [ [ text name ], icon ])
-
-        Nothing ->
-            text name
 
 
-parseDate : String -> Date
-parseDate d =
-    case Time.Date.fromISO8601 d of
-        Ok value ->
-            value
-
-        Err msg ->
-            date 0 0 0
-
-
-months : List String
-months =
-    [ "Jan", "Feb", "März", "Apr", "Mai", "Juni", "July", "Aug", "Sept", "Okt", "Nov", "Dez" ]
-
-
-monthName : Int -> String
-monthName index =
-    Array.fromList months
-        |> Array.get (index - 1)
-        |> Maybe.withDefault ""
-
-
-rowH2 title =
-    tr [ class "colspan3" ] [ td [ class "colspan3", colspan 3 ] [ h2 [] [ text title ] ] ]
-
-
-row a =
-    let
-        dat =
-            parseDate a.date
-    in
-        tr []
-            [ td [] [ text ((toString <| Time.Date.day dat) ++ ". " ++ (monthName <| Time.Date.month dat)) ]
-            , td [] [ maybeLink a.event [ Icons.arrowUpRight ] ]
-            , td [] [ maybeLink a.location [ Icons.mapPin ] ]
-            ]
-
-
-compareDate d =
-    case Time.Date.compare (date 1993 2 28) (parseDate d.date) of
-        GT ->
-            False
-
-        EQ ->
-            True
-
-        LT ->
-            True
-
-
-concerts : Maybe (Events) -> Html Msg
-concerts events =
+concerts : String -> Maybe (Events) -> Html Msg
+concerts now events =
     case events of
         Just ev ->
-            calendar "2028-05-15" "" ev
+            calendar now "" ev
 
         Nothing ->
             div []
@@ -195,7 +139,7 @@ view model =
         , main_ [ id "top" ]
             [ Markdown.toHtml [] model.content.news
             , socialMedia
-            , concerts model.content.events
+            , concerts model.content.now model.content.events
             , toMarkdown model.content.about
             , Markdown.toHtml [] model.content.contact
             ]

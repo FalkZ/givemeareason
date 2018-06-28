@@ -3,7 +3,7 @@ import { Main } from './Main.elm'
 import registerServiceWorker from './registerServiceWorker'
 import imports from '../imports'
 
-import content from './test.yaml'
+import content from './content.yaml'
 import joker from './joker.svg'
 
 console.log(content)
@@ -27,15 +27,25 @@ const app = Main.fullscreen()
 
 const { general, de, en } = imports.content
 
+const getNow = () => {
+	const d = new Date(Date.now())
+	let month = '' + (d.getMonth() + 1)
+	let day = '' + d.getDate()
+	let year = d.getFullYear()
+
+	if (month.length < 2) month = '0' + month
+	if (day.length < 2) day = '0' + day
+
+	return [year, month, day].join('-')
+}
+
+content.now = getNow()
+
+console.log(content.now)
+
 app.ports.content.send(content)
 
 console.log(content)
-
-function spellCheck(language) {
-	// have a real implementation!
-
-	return Object.assign({}, imports.content.general, imports.content[language])
-}
 
 registerServiceWorker()
 
