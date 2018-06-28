@@ -10,16 +10,32 @@ images:
   src: http://givemeareason-official.com/static/media/title.850341b1.jpg
   
 events:
-- date: "1993-02-28"
-  eventName: test
-  eventUrl: ''
-  locationName: bla
-  locationUrl: ''
-- date: "2018-06-28"
-  eventName: now
-  eventUrl: ''
-  locationName: bla
-  locationUrl: ''
+- date: 2017-05-13
+  location: Stall 6
+  eventName: Lauter Festival
+- date: 2017-05-26
+  location: Zürich
+  eventName: Vorstadt Sounds Festival
+- date: 2017-09-09
+  location: Münchenstein
+  eventName: Skatepark Opening
+- date: 2018-01-12
+  location: GZ Leimbach
+  eventName: Unplugged
+- date: 2018-04-17
+  location: La Bohème Bar
+  eventName: Unplugged
+- date: 2018-05-29
+  location: Polyterasse ETH
+  eventName: Summerbar by VSETH
+- date: 2018-06-23
+  location: Moods Zürich
+  eventName: Band-it
+  eventUrl: >-
+    https://www.band-it.ch/bands-on-stage/bandportraits/bandportrait/?user_bandit_pi2%5BshowUid%5D=1481&cHash=f2ba297933339ae47876ef5c6b7caa0e
+- date: 2018-09-08
+  location: Güterschuppen Töss
+  eventName: Töss Rockt 9
 
 about: > 
   # about
