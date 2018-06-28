@@ -9,6 +9,8 @@ news: >-
 images:
   - alt: ''
     src: 'http://givemeareason-official.com/static/media/title.850341b1.jpg'
+  - alt: ''
+    src: https://scontent-mxp1-1.cdninstagram.com/vp/b879cb021ac21de43af3ce8eda4db67c/5BB11864/t51.2885-15/e35/35616844_234258200517886_7419368227869818880_n.jpg
 eventsAltText: 'Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.'
 events:
   - date:  '2017-05-13'
