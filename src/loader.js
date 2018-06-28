@@ -16,6 +16,13 @@ import './Gallery.styl'
 
 import $ from 'jquery'
 
+if (
+	window.location.hash.includes('invite_token=') ||
+	window.location.hash.includes('recovery_token=')
+) {
+	window.location = '/admin/#' + window.location.hash
+}
+
 //Main.embed(document.getElementById('root'))
 
 const app = Main.fullscreen()
