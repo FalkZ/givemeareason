@@ -13,25 +13,37 @@ news: >-
 images:
   - alt: ''
     src: 'http://givemeareason-official.com/static/media/title.850341b1.jpg'
+
+eventsAltText: Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.
 events:
-  - date: 2017-05-13T00:00:00.000Z
-    eventName: Lauter Festival
-  - date: 2017-05-26T00:00:00.000Z
-    eventName: Vorstadt Sounds Festival
-  - date: 2017-09-09T00:00:00.000Z
-    eventName: Skatepark Opening
-  - date: 2018-01-12T00:00:00.000Z
-    eventName: Unplugged
-  - date: 2018-04-17T00:00:00.000Z
-    eventName: Unplugged
-  - date: 2018-05-29T00:00:00.000Z
-    eventName: Summerbar by VSETH
-  - date: 2018-06-23T00:00:00.000Z
-    eventName: Band-it
-    eventUrl: >-
-      https://www.band-it.ch/bands-on-stage/bandportraits/bandportrait/?user_bandit_pi2%5BshowUid%5D=1481&cHash=f2ba297933339ae47876ef5c6b7caa0e
-  - date: 2018-09-08T00:00:00.000Z
-    eventName: Töss Rockt 9
+- date: 2017-05-13
+  locationName: Stall 6
+  eventName: Lauter Festival
+- date: 2017-05-26
+  locationName: Zürich
+  eventName: Vorstadt Sounds Festival
+- date: 2017-09-09
+  locationName: Münchenstein
+  eventName: Skatepark Opening
+- date: 2018-01-12
+  locationName: GZ Leimbach
+  eventName: Unplugged
+- date: 2018-04-17
+  locationName: La Bohème Bar
+  eventName: Unplugged
+- date: 2018-05-29
+  locationName: Polyterasse ETH
+  eventName: Summerbar by VSETH
+- date: 2018-06-23
+  locationName: Moods Zürich
+  eventName: Band-it
+  eventUrl: >-
+    https://www.band-it.ch/bands-on-stage/bandportraits/bandportrait/?user_bandit_pi2%5BshowUid%5D=1481&cHash=f2ba297933339ae47876ef5c6b7caa0e
+- date: 2018-09-08
+  locationName: Güterschuppen Töss
+  eventName: Töss Rockt 9
+
+
 about: >
   # about
 
