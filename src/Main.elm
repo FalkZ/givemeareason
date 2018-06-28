@@ -30,7 +30,8 @@ main =
 
 
 initContent =
-    { news = "# LOADING"
+    { news = "# LOADING..."
+    , eventsAltText = ""
     , events = Maybe.Nothing
     , about = ""
     , contact = ""
@@ -173,13 +174,13 @@ exampleImages =
     ]
 
 
-concerts : String -> Maybe Events -> Html Msg
-concerts now events =
+concerts : String -> String -> Maybe Events -> Html Msg
+concerts now altText events =
     case events of
         Just ev ->
             div []
                 [ h1 [ id "concerts" ] [ text "concerts" ]
-                , calendar now "" ev
+                , calendar now altText ev
                 ]
 
         Nothing ->
@@ -218,7 +219,7 @@ view model =
             , blockquote [] [ h2 [] [ text "Melodic Punk Rock" ] ]
             , socialMedia
             , Markdown.toHtml [] model.content.news
-            , concerts model.content.now model.content.events
+            , concerts model.content.now model.content.eventsAltText model.content.events
             , toMarkdown model.content.about
             , Markdown.toHtml [] model.content.contact
             ]

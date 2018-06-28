@@ -4,9 +4,8 @@
 
 module Types exposing (..)
 
-
 import ImageSlider
-import Calendar exposing(Events)
+import Calendar exposing (Events)
 import Http
 
 
@@ -15,10 +14,12 @@ type alias Url =
     , en : String
     }
 
+
 type alias Image =
     { src : String
     , alt : String
     }
+
 
 type alias MaybeUrl =
     { name : String
@@ -35,19 +36,20 @@ type alias Event =
 
 type alias Content =
     { news : String
-    , events : Maybe (Events)
+    , eventsAltText : String
+    , events : Maybe Events
     , about : String
     , contact : String
     , logo : String
-    , now : String 
-    , images: List Image
+    , now : String
+    , images : List Image
     }
 
 
 type alias Model =
     { content : Content
     , language : String
-    , slider : Maybe ImageSlider.State  
+    , slider : Maybe ImageSlider.State
     }
 
 

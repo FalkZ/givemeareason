@@ -18,15 +18,19 @@ collections:
               - {label: Images, name: src, widget: image}
               - {label: Alternativ Text, name: alt, widget: string}
 
+          - label: Events Alt-Text
+            name: eventsAltText
+            widget: string
+
           - label: Events
             name: events
             widget: list
             fields:
-              - {label: Date, name: date, widget: date}
               - {label: Name, name: eventName, widget: string}
               - {label: URL (optional), name: eventUrl,  default: '', widget: string}
               - {label: Location, name: locationName }
               - {label: URL (optional), name: locationUrl, default: '', widget: string}
+              - {label: Date, name: date, widget: date, format: YYYY-MM-DD}
           
           - {label: About, name: about, widget: markdown}
 

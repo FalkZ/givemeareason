@@ -10812,9 +10812,9 @@ var _user$project$Types$Event = F3(
 	function (a, b, c) {
 		return {date: a, event: b, location: c};
 	});
-var _user$project$Types$Content = F7(
-	function (a, b, c, d, e, f, g) {
-		return {news: a, events: b, about: c, contact: d, logo: e, now: f, images: g};
+var _user$project$Types$Content = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {news: a, eventsAltText: b, events: c, about: d, contact: e, logo: f, now: g, images: h};
 	});
 var _user$project$Types$Model = F3(
 	function (a, b, c) {
@@ -10926,8 +10926,8 @@ var _user$project$Main$socialMedia = A2(
 			}
 		}
 	});
-var _user$project$Main$concerts = F2(
-	function (now, events) {
+var _user$project$Main$concerts = F3(
+	function (now, altText, events) {
 		var _p0 = events;
 		if (_p0.ctor === 'Just') {
 			return A2(
@@ -10949,7 +10949,7 @@ var _user$project$Main$concerts = F2(
 						}),
 					_1: {
 						ctor: '::',
-						_0: A3(_user$project$Calendar$calendar, now, '', _p0._0),
+						_0: A3(_user$project$Calendar$calendar, now, altText, _p0._0),
 						_1: {ctor: '[]'}
 					}
 				});
@@ -11309,7 +11309,7 @@ var _user$project$Main$view = function (model) {
 											model.content.news),
 										_1: {
 											ctor: '::',
-											_0: A2(_user$project$Main$concerts, model.content.now, model.content.events),
+											_0: A3(_user$project$Main$concerts, model.content.now, model.content.eventsAltText, model.content.events),
 											_1: {
 												ctor: '::',
 												_0: _user$project$Main$toMarkdown(model.content.about),
@@ -11401,7 +11401,7 @@ var _user$project$Main$update = F2(
 				};
 		}
 	});
-var _user$project$Main$initContent = {news: '# LOADING', events: _elm_lang$core$Maybe$Nothing, about: '', contact: '', logo: '', now: '', images: _user$project$Main$exampleImages};
+var _user$project$Main$initContent = {news: '# LOADING...', eventsAltText: '', events: _elm_lang$core$Maybe$Nothing, about: '', contact: '', logo: '', now: '', images: _user$project$Main$exampleImages};
 var _user$project$Main$initModel = {content: _user$project$Main$initContent, language: 'de', slider: _elm_lang$core$Maybe$Nothing};
 var _user$project$Main$content = _elm_lang$core$Native_Platform.incomingPort(
 	'content',
@@ -11410,93 +11410,98 @@ var _user$project$Main$content = _elm_lang$core$Native_Platform.incomingPort(
 		function (news) {
 			return A2(
 				_elm_lang$core$Json_Decode$andThen,
-				function (events) {
+				function (eventsAltText) {
 					return A2(
 						_elm_lang$core$Json_Decode$andThen,
-						function (about) {
+						function (events) {
 							return A2(
 								_elm_lang$core$Json_Decode$andThen,
-								function (contact) {
+								function (about) {
 									return A2(
 										_elm_lang$core$Json_Decode$andThen,
-										function (logo) {
+										function (contact) {
 											return A2(
 												_elm_lang$core$Json_Decode$andThen,
-												function (now) {
+												function (logo) {
 													return A2(
 														_elm_lang$core$Json_Decode$andThen,
-														function (images) {
-															return _elm_lang$core$Json_Decode$succeed(
-																{news: news, events: events, about: about, contact: contact, logo: logo, now: now, images: images});
-														},
-														A2(
-															_elm_lang$core$Json_Decode$field,
-															'images',
-															_elm_lang$core$Json_Decode$list(
+														function (now) {
+															return A2(
+																_elm_lang$core$Json_Decode$andThen,
+																function (images) {
+																	return _elm_lang$core$Json_Decode$succeed(
+																		{news: news, eventsAltText: eventsAltText, events: events, about: about, contact: contact, logo: logo, now: now, images: images});
+																},
 																A2(
-																	_elm_lang$core$Json_Decode$andThen,
-																	function (src) {
-																		return A2(
+																	_elm_lang$core$Json_Decode$field,
+																	'images',
+																	_elm_lang$core$Json_Decode$list(
+																		A2(
 																			_elm_lang$core$Json_Decode$andThen,
-																			function (alt) {
-																				return _elm_lang$core$Json_Decode$succeed(
-																					{src: src, alt: alt});
+																			function (src) {
+																				return A2(
+																					_elm_lang$core$Json_Decode$andThen,
+																					function (alt) {
+																						return _elm_lang$core$Json_Decode$succeed(
+																							{src: src, alt: alt});
+																					},
+																					A2(_elm_lang$core$Json_Decode$field, 'alt', _elm_lang$core$Json_Decode$string));
 																			},
-																			A2(_elm_lang$core$Json_Decode$field, 'alt', _elm_lang$core$Json_Decode$string));
-																	},
-																	A2(_elm_lang$core$Json_Decode$field, 'src', _elm_lang$core$Json_Decode$string)))));
+																			A2(_elm_lang$core$Json_Decode$field, 'src', _elm_lang$core$Json_Decode$string)))));
+														},
+														A2(_elm_lang$core$Json_Decode$field, 'now', _elm_lang$core$Json_Decode$string));
 												},
-												A2(_elm_lang$core$Json_Decode$field, 'now', _elm_lang$core$Json_Decode$string));
+												A2(_elm_lang$core$Json_Decode$field, 'logo', _elm_lang$core$Json_Decode$string));
 										},
-										A2(_elm_lang$core$Json_Decode$field, 'logo', _elm_lang$core$Json_Decode$string));
+										A2(_elm_lang$core$Json_Decode$field, 'contact', _elm_lang$core$Json_Decode$string));
 								},
-								A2(_elm_lang$core$Json_Decode$field, 'contact', _elm_lang$core$Json_Decode$string));
+								A2(_elm_lang$core$Json_Decode$field, 'about', _elm_lang$core$Json_Decode$string));
 						},
-						A2(_elm_lang$core$Json_Decode$field, 'about', _elm_lang$core$Json_Decode$string));
-				},
-				A2(
-					_elm_lang$core$Json_Decode$field,
-					'events',
-					_elm_lang$core$Json_Decode$oneOf(
-						{
-							ctor: '::',
-							_0: _elm_lang$core$Json_Decode$null(_elm_lang$core$Maybe$Nothing),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$core$Json_Decode$map,
-									_elm_lang$core$Maybe$Just,
-									_elm_lang$core$Json_Decode$list(
-										A2(
-											_elm_lang$core$Json_Decode$andThen,
-											function (date) {
-												return A2(
+						A2(
+							_elm_lang$core$Json_Decode$field,
+							'events',
+							_elm_lang$core$Json_Decode$oneOf(
+								{
+									ctor: '::',
+									_0: _elm_lang$core$Json_Decode$null(_elm_lang$core$Maybe$Nothing),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$core$Json_Decode$map,
+											_elm_lang$core$Maybe$Just,
+											_elm_lang$core$Json_Decode$list(
+												A2(
 													_elm_lang$core$Json_Decode$andThen,
-													function (eventName) {
+													function (date) {
 														return A2(
 															_elm_lang$core$Json_Decode$andThen,
-															function (eventUrl) {
+															function (eventName) {
 																return A2(
 																	_elm_lang$core$Json_Decode$andThen,
-																	function (locationName) {
+																	function (eventUrl) {
 																		return A2(
 																			_elm_lang$core$Json_Decode$andThen,
-																			function (locationUrl) {
-																				return _elm_lang$core$Json_Decode$succeed(
-																					{date: date, eventName: eventName, eventUrl: eventUrl, locationName: locationName, locationUrl: locationUrl});
+																			function (locationName) {
+																				return A2(
+																					_elm_lang$core$Json_Decode$andThen,
+																					function (locationUrl) {
+																						return _elm_lang$core$Json_Decode$succeed(
+																							{date: date, eventName: eventName, eventUrl: eventUrl, locationName: locationName, locationUrl: locationUrl});
+																					},
+																					A2(_elm_lang$core$Json_Decode$field, 'locationUrl', _elm_lang$core$Json_Decode$string));
 																			},
-																			A2(_elm_lang$core$Json_Decode$field, 'locationUrl', _elm_lang$core$Json_Decode$string));
+																			A2(_elm_lang$core$Json_Decode$field, 'locationName', _elm_lang$core$Json_Decode$string));
 																	},
-																	A2(_elm_lang$core$Json_Decode$field, 'locationName', _elm_lang$core$Json_Decode$string));
+																	A2(_elm_lang$core$Json_Decode$field, 'eventUrl', _elm_lang$core$Json_Decode$string));
 															},
-															A2(_elm_lang$core$Json_Decode$field, 'eventUrl', _elm_lang$core$Json_Decode$string));
+															A2(_elm_lang$core$Json_Decode$field, 'eventName', _elm_lang$core$Json_Decode$string));
 													},
-													A2(_elm_lang$core$Json_Decode$field, 'eventName', _elm_lang$core$Json_Decode$string));
-											},
-											A2(_elm_lang$core$Json_Decode$field, 'date', _elm_lang$core$Json_Decode$string)))),
-								_1: {ctor: '[]'}
-							}
-						})));
+													A2(_elm_lang$core$Json_Decode$field, 'date', _elm_lang$core$Json_Decode$string)))),
+										_1: {ctor: '[]'}
+									}
+								})));
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'eventsAltText', _elm_lang$core$Json_Decode$string));
 		},
 		A2(_elm_lang$core$Json_Decode$field, 'news', _elm_lang$core$Json_Decode$string)));
 var _user$project$Main$subscriptions = function (model) {

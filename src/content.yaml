@@ -8,7 +8,9 @@ news: >
 images:
 - alt: ""
   src: http://givemeareason-official.com/static/media/title.850341b1.jpg
-  
+
+eventsAltText: Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.
+
 events:
 - date: "1993-02-28"
   eventName: test
