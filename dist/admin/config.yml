@@ -9,12 +9,30 @@ collections:
         name: "deutsch"
         file: "dist/content/deutsch.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
+          - {label: News, name: news, widget: markdown}
+
+          - label: Images
+            name: images
             widget: list
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
+              - {label: Images, name: src, widget: image}
+              - {label: Alternativ Text, name: alt, widget: string}
+
+          - label: Events
+            name: events
+            widget: list
+            fields:
+              - {label: Date, name: date, widget: date}
+              - {label: Name, name: eventName, widget: string}
+              - {label: URL (optional), name: eventUrl,  default: '', widget: string}
+              - {label: Location, name: locationName }
+              - {label: URL (optional), name: locationUrl, default: '', widget: string}
+          
+          - {label: About, name: about, widget: markdown}
+
+          - {label: Contact, name: contact, widget: markdown}
+
+             
+              
+          
+           

@@ -1,14 +1,13 @@
-import { Main } from './Main.elm'
+import { Main } from './main.js'
 //import { Gallery } from './Gallery.elm'
 import registerServiceWorker from './registerServiceWorker'
 //import imports from '../imports'
 
-import content from './content.yaml'
+import { eval } from 'yaml'
+
 import joker from './joker.svg'
 
-console.log(content)
-
-content.logo = joker
+//console.log(content)
 
 import './main.styl'
 import './header.styl'
@@ -17,10 +16,10 @@ import './Gallery.styl'
 import $ from 'jquery'
 
 if (
-	window.location.hash.includes('invite_token=') ||
-	window.location.hash.includes('recovery_token=')
+	window.location.hash.includes('#invite_token=') ||
+	window.location.hash.includes('#recovery_token=')
 ) {
-	window.location = '/admin/#' + window.location.hash
+	window.location = '/admin/' + window.location.hash
 }
 
 //Main.embed(document.getElementById('root'))
@@ -46,13 +45,11 @@ const getNow = () => {
 	return [year, month, day].join('-')
 }
 
-content.now = getNow()
-
-console.log(content.now)
-
-app.ports.content.send(content)
-
-console.log(content)
+fetch('./content/deutsch.yml')
+	.then((response) => response.text())
+	.then((text) => eval(text) || {})
+	.then((content) => Object.assign(content, { now: getNow(), logo: joker }))
+	.then((content) => app.ports.content.send(content))
 
 registerServiceWorker()
 
