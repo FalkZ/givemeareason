@@ -3,7 +3,7 @@ import { Main } from './Main.js'
 import registerServiceWorker from './registerServiceWorker'
 //import imports from '../imports'
 
-import { eval } from 'yaml'
+import yaml from 'js-yaml'
 
 import joker from './joker.svg'
 
@@ -31,7 +31,7 @@ const app = Main.fullscreen()
 	app.ports.suggestions.send(suggestions)
 })*/
 
-const { general, de, en } = imports.content
+//const { general, de, en } = imports.content
 
 const getNow = () => {
 	const d = new Date(Date.now())
@@ -45,11 +45,16 @@ const getNow = () => {
 	return [year, month, day].join('-')
 }
 
-fetch('./content/deutsch.yml')
+fetch('content/deutsch.yml')
+	.then((response) => {
+		console.log(response)
+		return response
+	})
 	.then((response) => response.text())
-	.then((text) => eval(text) || {})
+	.then((text) => yaml.safeLoad(text) || {})
 	.then((content) => Object.assign(content, { now: getNow(), logo: joker }))
 	.then((content) => app.ports.content.send(content))
+	.catch(console.error)
 
 registerServiceWorker()
 

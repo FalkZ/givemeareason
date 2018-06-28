@@ -25,4 +25,3 @@ u utilityClasses =
         |> remove "}"
         |> remove "\""
         |> String.trim
-        |> Debug.log "string"

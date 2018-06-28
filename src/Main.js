@@ -10846,34 +10846,31 @@ var _user$project$U$remove = F2(
 		return A3(_user$project$U$replace, toRemove, '', string);
 	});
 var _user$project$U$u = function (utilityClasses) {
-	return A2(
-		_elm_lang$core$Debug$log,
-		'string',
-		_elm_lang$core$String$trim(
+	return _elm_lang$core$String$trim(
+		A2(
+			_user$project$U$remove,
+			'\"',
 			A2(
 				_user$project$U$remove,
-				'\"',
+				'}',
 				A2(
 					_user$project$U$remove,
-					'}',
+					'{',
 					A2(
 						_user$project$U$remove,
-						'{',
+						',',
 						A2(
 							_user$project$U$remove,
-							',',
-							A2(
-								_user$project$U$remove,
-								'$',
+							'$',
+							A3(
+								_user$project$U$replace,
+								' = ',
+								'U',
 								A3(
 									_user$project$U$replace,
-									' = ',
+									' = \"',
 									'U',
-									A3(
-										_user$project$U$replace,
-										' = \"',
-										'U',
-										_elm_lang$core$Basics$toString(utilityClasses))))))))));
+									_elm_lang$core$Basics$toString(utilityClasses)))))))));
 };
 
 var _user$project$Main$socialMedia = A2(
