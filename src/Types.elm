@@ -4,6 +4,8 @@
 
 module Types exposing (..)
 
+
+import ImageSlider
 import Calendar exposing(Events)
 import Http
 
@@ -13,6 +15,10 @@ type alias Url =
     , en : String
     }
 
+type alias Image =
+    { src : String
+    , alt : String
+    }
 
 type alias MaybeUrl =
     { name : String
@@ -33,19 +39,24 @@ type alias Content =
     , about : String
     , contact : String
     , logo : String
-    , now : String
+    , now : String 
+    , images: List Image
     }
 
 
 type alias Model =
     { content : Content
     , language : String
+    , slider : Maybe ImageSlider.State  
     }
 
 
 type Msg
     = ToggleLanguage
     | NewContent Content
+    | OpenSlider
+    | CloseSlider
+    | SliderMsg ImageSlider.Msg
 
 
 type alias MarkdownOptions =
