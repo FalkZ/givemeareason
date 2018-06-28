@@ -56,10 +56,10 @@ fetch('content/deutsch.yml')
 	.then((content) =>
 		Object.assign(content, {
 			now: getNow(),
-			logo: joker,
-			events: content.events.map((event) =>
-				Object.assign(event, { date: formatDate(event.date) })
-			)
+			logo: joker
+			//events: content.events.map((event) =>
+			//	Object.assign(event, { date: formatDate(event.date) })
+			//)
 		})
 	)
 	.then((content) => {

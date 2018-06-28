@@ -11,48 +11,48 @@ images:
     src: 'http://givemeareason-official.com/static/media/title.850341b1.jpg'
 eventsAltText: 'Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.'
 events:
-  - date: 2017-05-13T00:00:00.000Z
+  - date:  '2017-05-13'
     eventName: Lauter Festival
     eventUrl: ''
     locationName: Stall 6
     locationUrl: ''
-  - date: 2017-05-26T00:00:00.000Z
+  - date:  '2017-05-26'
     eventName: Vorstadt Sounds Festival
     eventUrl: ''
     locationName: Zürich
     locationUrl: ''
-  - date: 2017-09-09T00:00:00.000Z
+  - date:  '2017-09-09'
     eventName: Skatepark Opening
     eventUrl: ''
     locationName: Münchenstein
     locationUrl: ''
-  - date: 2018-01-12T00:00:00.000Z
+  - date:  '2018-01-12'
     eventName: Unplugged
     eventUrl: ''
     locationName: GZ Leimbach
     locationUrl: ''
-  - date: 2018-04-17T00:00:00.000Z
+  - date:  '2018-04-17'
     eventName: Unplugged
     eventUrl: ''
     locationName: La Bohème Bar
     locationUrl: ''
-  - date: 2018-05-29T00:00:00.000Z
+  - date:  '2018-05-29'
     eventName: Summerbar by VSETH
     eventUrl: ''
     locationName: Polyterasse ETH
     locationUrl: ''
-  - date: 2018-06-23T00:00:00.000Z
+  - date:  '2018-06-23'
     eventName: Band-it
     eventUrl: >-
       https://www.band-it.ch/bands-on-stage/bandportraits/bandportrait/?user_bandit_pi2%5BshowUid%5D=1481&cHash=f2ba297933339ae47876ef5c6b7caa0e
     locationName: Moods Zürich
     locationUrl: ''
-  - date: 2018-09-08T00:00:00.000Z
+  - date:  '2018-09-08'
     eventName: Töss Rockt 9
     eventUrl: 'http://www.kulturstreuer-toess.ch/'
     locationName: Güterschuppen Töss
     locationUrl: ''
-  - date: '2018-08-23'
+  - date:  '2018-08-23'
     eventName: 'Daizy May, All To Get Her & Give Me A Reason'
     eventUrl: >-
       https://i45.ch/?d=882&t=+Daizy+May%2C+All+To+Get+Her+%26+Give+Me+A+Reason+2B+Support+TBA%29+
