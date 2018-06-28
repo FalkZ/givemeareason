@@ -4,5 +4,3 @@ elm-stuff/
 node_modules/
 
 .cache/
-
-dist/
