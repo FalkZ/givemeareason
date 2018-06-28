@@ -1,7 +1,7 @@
 import { Main } from './Main.elm'
 //import { Gallery } from './Gallery.elm'
 import registerServiceWorker from './registerServiceWorker'
-import imports from '../imports'
+//import imports from '../imports'
 
 import content from './content.yaml'
 import joker from './joker.svg'
