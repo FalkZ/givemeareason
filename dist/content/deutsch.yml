@@ -1,11 +1,8 @@
-news: >-
+news: |-
   > [SINGLE "DEAR WEEKEND" OUT NOW!](https://blm.lnk.to/DearWeekend)
-
-  <br>
-
-  > <iframe width="560" height="315"
-  src="https://www.youtube.com/embed/PykG58v_KIk" frameborder="0"
-  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  > <br>
+  >
+  >
 images:
   - alt: ''
     src: 'http://givemeareason-official.com/static/media/title.850341b1.jpg'
@@ -61,8 +58,9 @@ events:
       https://i45.ch/?d=882&t=+Daizy+May%2C+All+To+Get+Her+%26+Give+Me+A+Reason+2B+Support+TBA%29+
     locationName: Industrie 45 (Zug)
     locationUrl: 'https://i45.ch/Kontakt'
-about: >
+about: >-
   # about
+
 
   The best looking band on Earth! Naja, oder einfach die vier Jungs von GIVE ME
   A REASON, die sich die Welt zu Füssen rocken. Dabei nehmen sie sich selbst
@@ -72,22 +70,24 @@ about: >
   Eigenkompositionen und einer Handvoll Covers nehmen uns die jungen Zürcher mit
   auf einen Road Trip live on Stage.
 
-  ### GIVE ME A REASON 
 
-  sind...
+  ### GIVE ME A REASON
 
 
-  |                  |                  |
+  are...
 
-  | ---------------- | ---------------: |
 
-  | Mattia Di Paolo  | Vocals / Gitarre |
+  |                  |                 |
 
-  | David Sipek      |          Gitarre |
+  | ---------------- | --------------- |
 
-  | Marvin Trottmann |             Bass |
+  | Mattia Di Paolo  | Vocals / Guitar |
 
-  | Dario Bistoletti |            Drums |
+  | David Sipek      | Guitar          |
+
+  | Marvin Trottmann | Bass            |
+
+  | Dario Bistoletti | Drums           |
 contact: >
   # contact / booking
 
