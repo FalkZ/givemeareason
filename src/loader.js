@@ -41,7 +41,11 @@ const formatDate = (d) => {
 	if (month.length < 2) month = '0' + month
 	if (day.length < 2) day = '0' + day
 
-	return [year, month, day].join('-')
+	return [
+		year,
+		month,
+		day
+	].join('-')
 }
 
 const getNow = () => formatDate(new Date(Date.now()))
@@ -56,7 +60,11 @@ fetch('content/deutsch.yml')
 	.then((content) =>
 		Object.assign(content, {
 			now: getNow(),
-			logo: joker
+			logo: joker,
+			images: content.images.map(({ alt, src }) => ({
+				alt: alt || '',
+				src: src.replace('/dist', '')
+			}))
 			//events: content.events.map((event) =>
 			//	Object.assign(event, { date: formatDate(event.date) })
 			//)
