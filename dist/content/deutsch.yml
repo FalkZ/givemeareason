@@ -1,67 +1,89 @@
-news: >-
+news: |+
   > [SINGLE "DEAR WEEKEND" OUT NOW!](https://blm.lnk.to/DearWeekend)
+  > <br>
 
-  <br>
-
-  > <iframe width="560" height="315"
-  src="https://www.youtube.com/embed/PykG58v_KIk" frameborder="0"
-  allow="autoplay; encrypted-media" allowfullscreen></iframe>
 images:
   - alt: ''
     src: 'http://givemeareason-official.com/static/media/title.850341b1.jpg'
   - alt: ''
-    src: https://scontent-mxp1-1.cdninstagram.com/vp/b879cb021ac21de43af3ce8eda4db67c/5BB11864/t51.2885-15/e35/35616844_234258200517886_7419368227869818880_n.jpg
+    src: >-
+      https://scontent-mxp1-1.cdninstagram.com/vp/b879cb021ac21de43af3ce8eda4db67c/5BB11864/t51.2885-15/e35/35616844_234258200517886_7419368227869818880_n.jpg
+  - src: /dist/images/2722.jpg
+    alt: ''
+  - src: /dist/images/2731.jpg
+    alt: ''
+  - src: /dist/images/2743.jpg
+    alt: ''
+  - src: /dist/images/stall6.jpg
+    alt: ''
+  - src: /dist/images/3187.jpg
+    alt: ''
+  - src: /dist/images/dsc05531.jpg
+    alt: ''
+  - src: /dist/images/dsc05568.jpg
+    alt: ''
+  - src: /dist/images/dsc05574.jpg
+    alt: ''
+  - src: /dist/images/dsc05610.jpg
+    alt: ''
+  - src: /dist/images/img_3689.jpg
+    alt: ''
+  - src: /dist/images/grümpileimbach.jpg
+    alt: ''
+  - src: /dist/images/jugendnacht17_26.jpg
+    alt: ''
 eventsAltText: 'Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.'
 events:
-  - date:  '2017-05-13'
+  - date: '2017-05-13'
     eventName: Lauter Festival
     eventUrl: ''
     locationName: Stall 6
     locationUrl: ''
-  - date:  '2017-05-26'
+  - date: '2017-05-26'
     eventName: Vorstadt Sounds Festival
     eventUrl: ''
     locationName: Zürich
     locationUrl: ''
-  - date:  '2017-09-09'
+  - date: '2017-09-09'
     eventName: Skatepark Opening
     eventUrl: ''
     locationName: Münchenstein
     locationUrl: ''
-  - date:  '2018-01-12'
+  - date: '2018-01-12'
     eventName: Unplugged
     eventUrl: ''
     locationName: GZ Leimbach
     locationUrl: ''
-  - date:  '2018-04-17'
+  - date: '2018-04-17'
     eventName: Unplugged
     eventUrl: ''
     locationName: La Bohème Bar
     locationUrl: ''
-  - date:  '2018-05-29'
+  - date: '2018-05-29'
     eventName: Summerbar by VSETH
     eventUrl: ''
     locationName: Polyterasse ETH
     locationUrl: ''
-  - date:  '2018-06-23'
+  - date: '2018-06-23'
     eventName: Band-it
     eventUrl: >-
       https://www.band-it.ch/bands-on-stage/bandportraits/bandportrait/?user_bandit_pi2%5BshowUid%5D=1481&cHash=f2ba297933339ae47876ef5c6b7caa0e
     locationName: Moods Zürich
     locationUrl: ''
-  - date:  '2018-09-08'
+  - date: '2018-09-08'
     eventName: Töss Rockt 9
     eventUrl: 'http://www.kulturstreuer-toess.ch/'
     locationName: Güterschuppen Töss
     locationUrl: ''
-  - date:  '2018-08-23'
+  - date: '2018-08-23'
     eventName: 'Daizy May, All To Get Her & Give Me A Reason'
     eventUrl: >-
       https://i45.ch/?d=882&t=+Daizy+May%2C+All+To+Get+Her+%26+Give+Me+A+Reason+2B+Support+TBA%29+
     locationName: Industrie 45 (Zug)
     locationUrl: 'https://i45.ch/Kontakt'
-about: >
+about: >-
   # about
+
 
   The best looking band on Earth! Naja, oder einfach die vier Jungs von GIVE ME
   A REASON, die sich die Welt zu Füssen rocken. Dabei nehmen sie sich selbst
@@ -71,19 +93,26 @@ about: >
   Eigenkompositionen und einer Handvoll Covers nehmen uns die jungen Zürcher mit
   auf einen Road Trip live on Stage.
 
-  ### GIVE ME A REASON sind
 
-  |                  |                  |
 
-  | ---------------- | ---------------: |
 
-  | Mattia Di Paolo  | Vocals / Gitarre |
+  ### GIVE ME A REASON
 
-  | David Sipek      |          Gitarre |
 
-  | Marvin Trottmann |             Bass |
+  are...
 
-  | Dario Bistoletti |            Drums |
+
+  |                  |                 |
+
+  | ---------------- | --------------- |
+
+  | Mattia Di Paolo  | Vocals / Guitar |
+
+  | David Sipek      | Guitar          |
+
+  | Marvin Trottmann | Bass            |
+
+  | Dario Bistoletti | Drums           |
 contact: >
   # contact / booking
 
