@@ -9,17 +9,29 @@ images:
     src: >-
       https://scontent-mxp1-1.cdninstagram.com/vp/b879cb021ac21de43af3ce8eda4db67c/5BB11864/t51.2885-15/e35/35616844_234258200517886_7419368227869818880_n.jpg
   - src: /dist/images/2722.jpg
+    alt: ''
   - src: /dist/images/2731.jpg
+    alt: ''
   - src: /dist/images/2743.jpg
+    alt: ''
   - src: /dist/images/stall6.jpg
+    alt: ''
   - src: /dist/images/3187.jpg
+    alt: ''
   - src: /dist/images/dsc05531.jpg
+    alt: ''
   - src: /dist/images/dsc05568.jpg
+    alt: ''
   - src: /dist/images/dsc05574.jpg
+    alt: ''
   - src: /dist/images/dsc05610.jpg
+    alt: ''
   - src: /dist/images/img_3689.jpg
+    alt: ''
   - src: /dist/images/grümpileimbach.jpg
+    alt: ''
   - src: /dist/images/jugendnacht17_26.jpg
+    alt: ''
 eventsAltText: 'Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.'
 events:
   - date: '2017-05-13'
