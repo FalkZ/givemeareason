@@ -16,7 +16,7 @@ collections:
             widget: list
             fields:
               - {label: Images, name: src, widget: image}
-              - {label: Alternativ Text, name: alt, widget: string}
+              - {label: Alternativ Text, name: alt, widget: string, default: ''}
 
           - label: Events Alt-Text
             name: eventsAltText
