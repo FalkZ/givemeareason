@@ -104,8 +104,14 @@ calendar now altText events =
         headOrEmpty list =
             Maybe.withDefault "" <| List.head list
 
-        year event =
-            [ (String.left 4 <| headOrEmpty event) ++ "Year" ]
+        yearString upcomming =
+            if upcomming then
+                "-00-00-Year"
+            else
+                "-Year"
+
+        year upcomming event =
+            [ (String.left 4 <| headOrEmpty event) ++ yearString upcomming ]
 
         upcomingAndPast =
             List.partition (\event -> event.date >= now) events
@@ -120,23 +126,29 @@ calendar now altText events =
                         [ defaultSettings.text.noUpcoming ]
 
                     False ->
-                        process temp
+                        process temp True
 
         past =
             Tuple.second <| upcomingAndPast
 
         listPrepend fun list =
             list
-                |> List.map (\item -> [ (fun item), item ])
+                |> List.map (\item -> [ item, (fun item) ])
                 |> List.concat
 
-        process data =
+        reverseOld upcomming =
+            if upcomming then
+                \a -> a
+            else
+                List.reverse
+
+        process data upcomming =
             data
                 |> List.map createComparable
-                |> listPrepend year
+                |> listPrepend (year upcomming)
                 |> Set.fromList
                 |> Set.toList
-                |> List.reverse
+                |> reverseOld upcomming
                 |> List.map (rows defaultSettings)
     in
         table []
@@ -145,12 +157,7 @@ calendar now altText events =
                     [ [ titleRow "h2" "upcoming" ]
                     , upcoming
                     , [ titleRow "h2" "past" ]
-                    , process past
+                    , process past False
                     ]
                 )
             ]
-
-
-
-
-

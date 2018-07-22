@@ -41,18 +41,14 @@ const formatDate = (d) => {
 	if (month.length < 2) month = '0' + month
 	if (day.length < 2) day = '0' + day
 
-	return [
-		year,
-		month,
-		day
-	].join('-')
+	return [ year, month, day ].join('-')
 }
 
 const getNow = () => formatDate(new Date(Date.now()))
 
 fetch('content/deutsch.yml')
 	.then((response) => {
-		console.log(response)
+		//console.log(response)
 		return response
 	})
 	.then((response) => response.text())

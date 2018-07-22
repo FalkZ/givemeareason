@@ -10685,6 +10685,11 @@ var _user$project$Calendar$rows = F2(
 	});
 var _user$project$Calendar$calendar = F3(
 	function (now, altText, events) {
+		var reverseOld = function (upcomming) {
+			return upcomming ? function (a) {
+				return a;
+			} : _elm_lang$core$List$reverse;
+		};
 		var listPrepend = F2(
 			function (fun, list) {
 				return _elm_lang$core$List$concat(
@@ -10693,10 +10698,10 @@ var _user$project$Calendar$calendar = F3(
 						function (item) {
 							return {
 								ctor: '::',
-								_0: fun(item),
+								_0: item,
 								_1: {
 									ctor: '::',
-									_0: item,
+									_0: fun(item),
 									_1: {ctor: '[]'}
 								}
 							};
@@ -10710,37 +10715,44 @@ var _user$project$Calendar$calendar = F3(
 			},
 			events);
 		var past = _elm_lang$core$Tuple$second(upcomingAndPast);
+		var yearString = function (upcomming) {
+			return upcomming ? '-00-00-Year' : '-Year';
+		};
 		var headOrEmpty = function (list) {
 			return A2(
 				_elm_lang$core$Maybe$withDefault,
 				'',
 				_elm_lang$core$List$head(list));
 		};
-		var year = function (event) {
-			return {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$core$Basics_ops['++'],
+		var year = F2(
+			function (upcomming, event) {
+				return {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$core$Basics_ops['++'],
+						A2(
+							_elm_lang$core$String$left,
+							4,
+							headOrEmpty(event)),
+						yearString(upcomming)),
+					_1: {ctor: '[]'}
+				};
+			});
+		var process = F2(
+			function (data, upcomming) {
+				return A2(
+					_elm_lang$core$List$map,
+					_user$project$Calendar$rows(_user$project$Calendar$defaultSettings),
 					A2(
-						_elm_lang$core$String$left,
-						4,
-						headOrEmpty(event)),
-					'Year'),
-				_1: {ctor: '[]'}
-			};
-		};
-		var process = function (data) {
-			return A2(
-				_elm_lang$core$List$map,
-				_user$project$Calendar$rows(_user$project$Calendar$defaultSettings),
-				_elm_lang$core$List$reverse(
-					_elm_lang$core$Set$toList(
-						_elm_lang$core$Set$fromList(
-							A2(
-								listPrepend,
-								year,
-								A2(_elm_lang$core$List$map, _user$project$Calendar$createComparable, data))))));
-		};
+						reverseOld,
+						upcomming,
+						_elm_lang$core$Set$toList(
+							_elm_lang$core$Set$fromList(
+								A2(
+									listPrepend,
+									year(upcomming),
+									A2(_elm_lang$core$List$map, _user$project$Calendar$createComparable, data))))));
+			});
 		var upcoming = function () {
 			var temp = _elm_lang$core$Tuple$first(upcomingAndPast);
 			var _p4 = _elm_lang$core$List$isEmpty(temp);
@@ -10751,7 +10763,7 @@ var _user$project$Calendar$calendar = F3(
 					_1: {ctor: '[]'}
 				};
 			} else {
-				return process(temp);
+				return A2(process, temp, true);
 			}
 		}();
 		return A2(
@@ -10782,7 +10794,7 @@ var _user$project$Calendar$calendar = F3(
 									},
 									_1: {
 										ctor: '::',
-										_0: process(past),
+										_0: A2(process, past, false),
 										_1: {ctor: '[]'}
 									}
 								}
@@ -10988,12 +11000,8 @@ var _user$project$Main$concerts = F3(
 	});
 var _user$project$Main$exampleImages = {
 	ctor: '::',
-	_0: {alt: '', src: 'http://givemeareason-official.com/static/media/title.850341b1.jpg'},
-	_1: {
-		ctor: '::',
-		_0: {alt: 'alt 2', src: 'http://givemeareason-official.netlify.com/static/28378028_416887728756225_3617264513967785531_n-6cce4676f6bb54a95e5bb4c1723ddace-02605.jpg'},
-		_1: {ctor: '[]'}
-	}
+	_0: {alt: '', src: 'https://givemeareason-official.com/static/media/title.850341b1.jpg'},
+	_1: {ctor: '[]'}
 };
 var _user$project$Main$firstImage = function (images) {
 	return function (_) {
