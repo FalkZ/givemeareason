@@ -9,11 +9,11 @@ news: >+
 
 images:
   - alt: ''
+    src: /dist/images/2722.jpg
+  - alt: ''
     src: /dist/images/title.jpg
   - alt: ''
     src: /dist/images/eth.jpg
-  - alt: ''
-    src: /dist/images/2722.jpg
   - alt: ''
     src: /dist/images/2731.jpg
   - alt: ''
@@ -36,6 +36,7 @@ images:
     src: /dist/images/grümpileimbach.jpg
   - alt: ''
     src: /dist/images/jugendnacht17_26.jpg
+  - {}
 eventsAltText: 'Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.'
 events:
   - date: '2017-05-13'
