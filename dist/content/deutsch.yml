@@ -69,17 +69,17 @@ events:
       https://www.band-it.ch/bands-on-stage/bandportraits/bandportrait/?user_bandit_pi2%5BshowUid%5D=1481&cHash=f2ba297933339ae47876ef5c6b7caa0e
     locationName: Moods Zürich
     locationUrl: ''
-  - date: '2018-09-08'
-    eventName: Töss Rockt 9
-    eventUrl: 'http://www.kulturstreuer-toess.ch/'
-    locationName: Güterschuppen Töss
-    locationUrl: ''
   - date: '2018-08-23'
     eventName: 'Daizy May, All To Get Her & Give Me A Reason'
     eventUrl: >-
       https://i45.ch/?d=882&t=+Daizy+May%2C+All+To+Get+Her+%26+Give+Me+A+Reason+2B+Support+TBA%29+
     locationName: Industrie 45 (Zug)
     locationUrl: 'https://i45.ch/Kontakt'
+  - date: '2018-09-08'
+    eventName: Töss Rockt 9
+    eventUrl: 'http://www.kulturstreuer-toess.ch/'
+    locationName: Güterschuppen Töss
+    locationUrl: ''
 about: >-
   # about
 
