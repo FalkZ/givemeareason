@@ -85,6 +85,12 @@ events:
     eventUrl: 'http://www.kulturstreuer-toess.ch/'
     locationName: Güterschuppen Töss
     locationUrl: ''
+  - date: '2018-09-27'
+    eventName: ESF 2018
+    eventUrl: 'http://www.esf.ethz.ch/index.php'
+    locationName: ETH Hönggerberg
+    locationUrl: >-
+      https://www.google.ch/maps/search/eth+h%C3%B6nggerberg/@47.4086624,8.5064616,18z/data=!3m1!4b1
 about: >-
   # about
 
