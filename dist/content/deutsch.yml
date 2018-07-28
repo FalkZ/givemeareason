@@ -84,7 +84,8 @@ events:
     eventName: Töss Rockt 9
     eventUrl: 'http://www.kulturstreuer-toess.ch/'
     locationName: Güterschuppen Töss
-    locationUrl: ''
+    locationUrl: >-
+      https://www.google.ch/maps/place/G%C3%BCterschuppen+Bahnhof+T%C3%B6ss/@47.4899309,8.7078333,17z/data=!3m1!4b1!4m5!3m4!1s0x479a9912f73588a5:0xd188c5cad4261c3d!8m2!3d47.4899273!4d8.710022
   - date: '2018-09-27'
     eventName: ESF 2018
     eventUrl: 'http://www.esf.ethz.ch/index.php'
