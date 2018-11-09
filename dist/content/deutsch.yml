@@ -92,6 +92,10 @@ events:
     locationName: ETH Hönggerberg
     locationUrl: >-
       https://www.google.ch/maps/search/eth+h%C3%B6nggerberg/@47.4086624,8.5064616,18z/data=!3m1!4b1
+  - date: '2018-11-23'
+    eventName: ETH ROCK NIGHT
+    eventUrl: 'https://vcs.ethz.ch/event/rocknight/'
+    locationName: ETH Hönggerberg
 about: >-
   # about
 
@@ -121,18 +125,12 @@ about: >-
 
   | David Sipek      | Guitar          |
 
-  | Marvin Trottmann | Bass            |
-
   | Dario Bistoletti | Drums           |
 contact: >
   # contact / booking
 
 
-  [booking/management:
-  j.mulle@growingrootsagency.ch](mailto:j.mulle@growingrootsagency.ch)
-
-
-  [contact:
+  [booking/management/contact:
   givemeareason.official@gmail.com](mailto:givemeareason.official@gmail.com)
 
 
