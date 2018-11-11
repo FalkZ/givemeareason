@@ -4,6 +4,8 @@ backend:
 collections:
   - label: "Languages"
     name: "languages"
+    editor:
+      preview: false
     files:
       - label: "Deutsch"
         name: "deutsch"
