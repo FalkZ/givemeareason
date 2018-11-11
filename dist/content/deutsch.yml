@@ -96,6 +96,7 @@ events:
     eventName: ETH ROCK NIGHT
     eventUrl: 'https://vcs.ethz.ch/event/rocknight/'
     locationName: ETH Hönggerberg
+    locationUrl: ' '
 about: >-
   # about
 
