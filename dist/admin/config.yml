@@ -27,9 +27,9 @@ collections:
             widget: list
             fields:
               - {label: Name, name: eventName, widget: string}
-              - {label: URL (optional), name: eventUrl,  default: '', widget: string}
-              - {label: Location, name: locationName }
-              - {label: URL (optional), name: locationUrl, default: '', widget: string}
+              - {label: URL (optional), name: eventUrl, required: true, default: '', widget: string}
+              - {label: Location, name: locationName,default: '', widget: string }
+              - {label: URL (optional), name: locationUrl, required: true, default: '', widget: string}
               - {label: Date, name: date, widget: date, format: YYYY-MM-DD}
           
           - {label: About, name: about, widget: markdown}
