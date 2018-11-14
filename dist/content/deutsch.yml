@@ -36,6 +36,8 @@ images:
     src: /dist/images/grümpileimbach.jpg
   - alt: ''
     src: /dist/images/jugendnacht17_26.jpg
+  - alt: Give Me A Reason Shooting 2018
+    src: /dist/images/gmar_muenchenstein_shoot.jpg
 eventsAltText: 'Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.'
 events:
   - date: '2017-05-13'
