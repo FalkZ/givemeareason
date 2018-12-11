@@ -99,6 +99,12 @@ events:
     eventUrl: 'https://vcs.ethz.ch/event/rocknight/'
     locationName: ETH Hönggerberg
     locationUrl: ' '
+  - date: '2018-09-21'
+    eventName: Jugendanlass
+    locationName: Solothurn
+  - date: '2018-08-26'
+    eventName: Sommerfest Unplugged
+    locationName: Alte Werkstatt Zürich-Leimbach
 about: >-
   # about
 
