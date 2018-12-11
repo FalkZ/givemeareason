@@ -86,12 +86,18 @@ events:
       https://i45.ch/?d=882&t=+Daizy+May%2C+All+To+Get+Her+%26+Give+Me+A+Reason+2B+Support+TBA%29+
     locationName: Industrie 45 (Zug)
     locationUrl: 'https://i45.ch/Kontakt'
+  - date: '2018-08-26'
+    eventName: Sommerfest Unplugged
+    locationName: Alte Werkstatt Zürich-Leimbach
   - date: '2018-09-08'
     eventName: Töss Rockt 9
     eventUrl: 'http://www.kulturstreuer-toess.ch/'
     locationName: Güterschuppen Töss
     locationUrl: >-
       https://www.google.ch/maps/place/G%C3%BCterschuppen+Bahnhof+T%C3%B6ss/@47.4899309,8.7078333,17z/data=!3m1!4b1!4m5!3m4!1s0x479a9912f73588a5:0xd188c5cad4261c3d!8m2!3d47.4899273!4d8.710022
+  - date: '2018-09-21'
+    eventName: Jugendanlass
+    locationName: Solothurn
   - date: '2018-09-27'
     eventName: ESF 2018
     eventUrl: 'http://www.esf.ethz.ch/index.php'
@@ -103,12 +109,6 @@ events:
     eventUrl: 'https://vcs.ethz.ch/event/rocknight/'
     locationName: ETH Hönggerberg
     locationUrl: ' '
-  - date: '2018-09-21'
-    eventName: Jugendanlass
-    locationName: Solothurn
-  - date: '2018-08-26'
-    eventName: Sommerfest Unplugged
-    locationName: Alte Werkstatt Zürich-Leimbach
 about: >-
   # about
 
