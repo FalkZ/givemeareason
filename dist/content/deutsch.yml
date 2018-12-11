@@ -40,6 +40,8 @@ images:
     src: /dist/images/grümpileimbach.jpg
   - alt: ''
     src: /dist/images/jugendnacht17_26.jpg
+  - alt: Give Me A Reason Münchenstein Sept 2017 (Support von Swiss und die Andern)
+    src: /dist/images/mattia_muenchenstein_2017.jpg
 eventsAltText: 'Wir freuen uns darauf, demnächst neue Konzerte bekanntgeben zu können.'
 events:
   - date: '2017-05-13'
