@@ -109,6 +109,9 @@ events:
     eventUrl: 'https://vcs.ethz.ch/event/rocknight/'
     locationName: ETH Hönggerberg
     locationUrl: ' '
+  - date: '2019-02-10'
+    eventName: Give Me A Reason @ Stampfi
+    locationName: Knonau - Stampfli
 about: >-
   # ABOUT
 
