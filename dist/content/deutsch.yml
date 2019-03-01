@@ -104,6 +104,21 @@ events:
   - date: '2019-02-10'
     eventName: Give Me A Reason @ Stampfi
     locationName: Knonau - Stampfli
+  - date: '2019-03-23'
+    eventName: Don't Kill The Postman Support
+    eventUrl: www.sansibar.ch
+    locationName: Sansibar Langstrasse
+  - date: '2019-04-05'
+    eventName: Unplugged @ Kirche Wollishofen
+    locationName: Kirche Wollishofen
+  - date: '2019-06-27'
+    eventName: OpenAir Monte Carasso
+    eventUrl: 'http://www.openairmontecarasso.ch'
+    locationName: Monte Carasso
+  - date: '2019-07-06'
+    eventName: Rock Battle Hittnau
+    eventUrl: 'https://pixel.facebook.com/events/249170732444198/'
+    locationName: Hittnau
 about: >-
   # ABOUT
 
